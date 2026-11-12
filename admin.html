@@ -5,11 +5,11 @@
     <link rel="icon" type="image/png" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Админка — Победи дракона</title>
-  <script type="module" crossorigin src="./assets/admin-rq47G6FV.js"></script>
+  <script type="module" crossorigin src="./assets/admin-DhERwPFV.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/Units-CJB2CyT7.js">
-  <link rel="modulepreload" crossorigin href="./assets/dayAmount-31e6KKMl.js">
+  <link rel="modulepreload" crossorigin href="./assets/paymentEntry-BDStODP9.js">
   <link rel="modulepreload" crossorigin href="./assets/heroRoster-DUqZDLo9.js">
-  <link rel="stylesheet" crossorigin href="./assets/dayAmount-DZshOmRr.css">
+  <link rel="stylesheet" crossorigin href="./assets/paymentEntry-DZshOmRr.css">
 </head>
 <body>
     <div class="scene-glow"></div>
@@ -27,7 +27,7 @@
             <nav class="tabs" role="tablist">
                 <button type="button" class="tab-btn active" data-tab="plan" role="tab">План</button>
                 <button type="button" class="tab-btn" data-tab="table" role="tab">Таблица</button>
-                <button type="button" class="tab-btn" data-tab="add" role="tab">Внести сумму</button>
+                <button type="button" class="tab-btn" data-tab="add" role="tab">Внести оплату</button>
                 <button type="button" class="tab-btn" data-tab="import" role="tab">Импорт</button>
                 <button type="button" class="tab-btn" data-tab="heroes" role="tab">Герои</button>
                 <button type="button" class="tab-btn" data-tab="anim" role="tab">Анимации</button>
@@ -61,7 +61,7 @@
                 </div>
             </section>
 
-            <!-- Внести сумму -->
+            <!-- Внести оплату -->
             <section class="tab" data-tab-panel="add" hidden>
                 <div class="count-form">
                     <label for="add-rop">Группа</label>
@@ -70,7 +70,7 @@
                     <input id="add-date" type="date" readonly />
                 </div>
                 <div id="add-counter"></div>
-                <p class="hint">Введите итоговую сумму группы за день игры. Если она выросла, герой ударит дракона на табло.</p>
+                <p class="hint">Выберите группу и введите сумму из платёжки. Каждая внесённая оплата даёт герою один удар.</p>
             </section>
 
             <!-- Импорт -->
@@ -157,7 +157,7 @@
                 <p class="hint">После смены прежний PIN перестанет работать. После нескольких неверных вводов подряд вход блокируется на 10 минут.</p>
 
                 <h2>PIN-коды CEO групп</h2>
-                <p class="hint">У каждого CEO свой PIN для страницы <a id="rg-link" href="rg.html" target="_blank" rel="noopener">«Сумма группы»</a> — там можно только внести сумму своей группы; группу страница узнаёт по PIN. PIN создаётся случайно и показывается здесь один раз: скопируйте и раздайте CEO. Новый PIN сразу отменяет прежний (например, если старый кто-то узнал).</p>
+                <p class="hint">У каждого CEO свой PIN для страницы <a id="rg-link" href="rg.html" target="_blank" rel="noopener">«Оплаты группы»</a>. Страница определяет группу по PIN. Скопируйте PIN после создания и передайте CEO. Новый PIN сразу отменяет прежний.</p>
                 <div id="group-pins" class="group-pins"></div>
                 <button type="button" id="group-pins-all" class="primary-btn">Создать PIN для всех групп<span class="btn-arrow">→</span></button>
                 <div id="group-pins-out" class="pin-out" hidden>
